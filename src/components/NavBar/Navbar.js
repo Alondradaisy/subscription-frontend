@@ -18,6 +18,20 @@ const useStyles = makeStyles((theme) => ({
 async function Navbar() {
   const classes = useStyles();
 
+  async function logout() {
+    try {
+      await axios.get("http://localhost:3002/api/users/logout");
+
+      dispatch({
+        type: "LOG_OUT",
+      });
+      Cookies.remove("jwt-cookie");
+      props.history.push("/login");
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   return <div></div>;
 }
 
