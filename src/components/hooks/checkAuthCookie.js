@@ -38,3 +38,5 @@ function CheckAuthCookie() {
     userLogin,
   };
 }
+
+export default CheckAuthCookie;
