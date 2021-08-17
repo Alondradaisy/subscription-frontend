@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Cookie from "js-cookie";
 import jwtDecode from "jwt-decode";
 
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 function CheckAuthCookie() {
   const { dispatch } = useContext(AuthContext);
 
