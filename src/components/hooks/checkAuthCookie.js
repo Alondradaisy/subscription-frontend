@@ -15,4 +15,26 @@ function CheckAuthCookie() {
       return false;
     }
   }
+
+  function userLogin() {
+    let checkCookieExists = doesCookieExist();
+
+    if (checkCookieExists) {
+      const cookie = Cookie.get("jwt-cookie");
+      const jwtDecodedToken = jwtDecode(cookie);
+
+      dispatch({
+        type: "LOGIN",
+        user: {
+          email: jwtDecodedToken.email,
+          username: jwtDecodedToken.username,
+        },
+      });
+    }
+  }
+
+  return {
+    doesCookieExist,
+    userLogin,
+  };
 }
