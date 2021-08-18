@@ -23,10 +23,10 @@ function Profile() {
     }
   }
 
-  return ( 
+  return (
     <div>
-        <button onClick={handleUpdate}>Update!</button>
-    </div>;
+      <button onClick={handleUpdate}>Update!</button>
+    </div>
   );
 }
 

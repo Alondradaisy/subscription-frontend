@@ -6,7 +6,7 @@ import "./App.css";
 import MainRouter from "./MainRouter";
 
 import Loader from "./components/Loader/Loader"; //loading wheel
-import AuthContextWrapper from "./components/context/AuthContext";
+import AuthContextWrapper from "./context/AuthContext";
 
 function App() {
   return (
