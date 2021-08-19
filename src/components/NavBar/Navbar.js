@@ -33,6 +33,15 @@ async function Navbar(props) {
     dispatch,
   } = useContext(AuthContext);
 
+  const isUserLoggedIn = user ? true : false;
+  const navLinkTitleOne = isUserLoggedIn ? "/profile" : "/login";
+  const navLinkDisplayOne = isUserLoggedIn ? `${user.email}` : "login";
+  const navLinkTitleTwo = isUserLoggedIn ? "/logout" : "sign-up";
+  const navLinkDisplayTwo = isUserLoggedIn ? "Logout" : "Sign-up";
+
+  //logout button
+  const logoutButton = isUserLoggedIn ? logout : () => {};
+
   async function logout() {
     try {
       await axios.get("http://localhost:3000/api/users/logout");
@@ -64,7 +73,7 @@ async function Navbar(props) {
           <NavLink activeStyle={{ color: "red" }} exact t0={navLinkTitleTwo}>
             <Button
               color="inherit"
-              style={{ color: white }}
+              style={{ color: "white" }}
               onClick={() => logoutButton()}
             >
               {navLinkDisplayTwo}
