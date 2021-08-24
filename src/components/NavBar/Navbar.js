@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-async function Navbar(props) {
+function Navbar(props) {
   const classes = useStyles();
   const { userLogin } = CheckAuthCookie();
 
@@ -70,7 +70,7 @@ async function Navbar(props) {
             </Button>
           </NavLink>
 
-          <NavLink activeStyle={{ color: "red" }} exact t0={navLinkTitleTwo}>
+          <NavLink activeStyle={{ color: "red" }} exact to={navLinkTitleTwo}>
             <Button
               color="inherit"
               style={{ color: "white" }}

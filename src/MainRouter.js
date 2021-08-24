@@ -10,8 +10,8 @@ function MainRouter() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/profile" component={Profile} />
-        <Route exact path="/home" component={Home} />
+        {/* <Route exact path="/profile" component={Profile} /> */}
+        {/* <Route exact path="/home" component={Home} /> */}
       </Switch>
     </>
   );
